@@ -9,6 +9,12 @@ var doc = connection.get('examples', 'counter');
 
 // Get initial value of document and subscribe to changes
 doc.subscribe(showNumbers);
+doc.subscribe
+const subscribe2 = () => {
+  new Promise((resolve, reject) => {
+    return doc.subscribe();
+  });
+}
 // When document changes (by this client or any other, or the server),
 // update the number on the page
 doc.on('op', showNumbers);
